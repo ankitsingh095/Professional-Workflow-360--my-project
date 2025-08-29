@@ -5,7 +5,7 @@
 A compact Office Management System containing integrated modules for **Attendance**, **Payroll**, and **Employee Lifecycle**. The project demonstrates:
 
 - Integrated attendance, payroll, and employee lifecycle modules (Employee, Attendance, Payroll models + admin and UI).
-- Responsive UI built with Bootstrap (via CDN) for quick, recruiter-friendly demo.
+- Responsive UI built with Bootstrap (via CDN) for quick
 - A simple payroll processing view that computes net salary after deductions (absent days).
 
 ## Quick start
