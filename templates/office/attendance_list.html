@@ -1,0 +1,16 @@
+{% extends 'office/base.html' %}
+{% block content %}
+<h3>Attendance (recent)</h3>
+<form method="post" action="/attendance/add/" class="row gy-2 gx-3 align-items-center">
+  {% csrf_token %}
+  {{ form.employee.label_tag }} {{ form.employee }}
+  {{ form.date.label_tag }} {{ form.date }}
+  {{ form.status.label_tag }} {{ form.status }}
+  <div><button class="btn btn-primary" type="submit">Add</button></div>
+</form>
+<hr/>
+<table class="table table-sm">
+  <thead><tr><th>Employee</th><th>Date</th><th>Status</th></tr></thead>
+  <tbody>{% for a in attendances %}<tr><td>{{ a.employee }}</td><td>{{ a.date }}</td><td>{{ a.status }}</td></tr>{% empty %}<tr><td colspan="3">No records</td></tr>{% endfor %}</tbody>
+</table>
+{% endblock %}

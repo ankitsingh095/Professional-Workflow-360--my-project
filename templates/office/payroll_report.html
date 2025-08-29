@@ -1,0 +1,8 @@
+{% extends 'office/base.html' %}
+{% block content %}
+<h3>Payroll Report - {{ month }}</h3>
+<table class="table table-bordered">
+  <thead><tr><th>Employee</th><th>Deductions</th><th>Net Salary</th></tr></thead>
+  <tbody>{% for r in results %}<tr><td>{{ r.employee }}</td><td>{{ r.deductions }}</td><td>{{ r.net }}</td></tr>{% endfor %}</tbody>
+</table>
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends 'office/base.html' %}
+{% block content %}
+<h3>New Employee</h3>
+<form method="post" class="row g-3">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <div><button class="btn btn-primary" type="submit">Save</button></div>
+</form>
+{% endblock %}
